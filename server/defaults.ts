@@ -21,6 +21,7 @@ export const defaultDashboard: DashboardSeed = {
     { id: 'living-climate', sectionId: 'living', kind: 'climate', entityId: 'climate.woonkamer', title: 'Verwarming', position: 40, options: { layoutType: 'slim-vertical' } },
     { id: 'living-humidity', sectionId: 'living', kind: 'sensor', entityId: 'sensor.woonkamer_luchtvochtigheid', title: 'Luchtvochtigheid', position: 50 },
     { id: 'television', sectionId: 'living', kind: 'media', entityId: 'media_player.shield_2', title: 'Televisie', position: 60, options: { layout: 'slim' } },
+    { id: 'jbl-now-playing', sectionId: 'living', kind: 'media', entityId: 'media_player.jbl_bar_3', title: 'Nu afgespeeld', position: 70, options: { layout: 'slim' } },
     { id: 'bedroom-light', sectionId: 'upstairs', kind: 'button', entityId: 'light.slaapkamer_2', title: 'Slaapkamer', icon: 'mdi:bed-king-outline', position: 10, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'office-light', sectionId: 'upstairs', kind: 'button', entityId: 'light.kantoor', title: 'Kantoor', icon: 'mdi:desk', position: 20, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'attic-left', sectionId: 'upstairs', kind: 'button', entityId: 'light.zolder_verlichting_links', title: 'Zolder links', position: 30, options: { service: 'toggle', layoutType: 'slim' } },
