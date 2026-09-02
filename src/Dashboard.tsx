@@ -12,6 +12,7 @@ import {
 } from '@hakit/components';
 import { Icon } from '@iconify/react';
 import type { DashboardCardConfig, DashboardConfig, DashboardSectionConfig } from './dashboard-config';
+import { buttonCardProps, commonCardProps } from './card-props';
 
 const DynamicButton = ButtonCard as unknown as ComponentType<Record<string, unknown>>;
 const DynamicClimate = ClimateCard as unknown as ComponentType<Record<string, unknown>>;
@@ -22,16 +23,10 @@ const DynamicEntitiesRow = EntitiesCardRow as unknown as ComponentType<Record<st
 
 function DashboardCard({ card }: { card: DashboardCardConfig }) {
   if (!card.entityId && card.kind !== 'entities') return null;
-  const common = {
-    key: card.id,
-    entity: card.entityId,
-    title: card.title,
-    icon: card.icon,
-    className: `configured-card configured-card--${card.kind}`,
-  };
+  const common = commonCardProps(card);
   switch (card.kind) {
     case 'button':
-      return <DynamicButton {...common} service={card.options.service ?? 'toggle'} layoutType={card.options.layoutType ?? 'slim'} />;
+      return <DynamicButton {...buttonCardProps(card)} />;
     case 'sensor':
       return <DynamicSensor {...common} layoutType={card.options.layoutType ?? 'slim'} />;
     case 'climate':

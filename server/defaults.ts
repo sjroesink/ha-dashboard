@@ -22,6 +22,7 @@ export const defaultDashboard: DashboardSeed = {
     { id: 'living-humidity', sectionId: 'living', kind: 'sensor', entityId: 'sensor.woonkamer_luchtvochtigheid', title: 'Luchtvochtigheid', position: 50 },
     { id: 'television', sectionId: 'living', kind: 'media', entityId: 'media_player.shield_2', title: 'Televisie', position: 60, options: { layout: 'slim' } },
     { id: 'jbl-now-playing', sectionId: 'living', kind: 'media', entityId: 'media_player.jbl_bar_3', title: 'Nu afgespeeld', position: 70, options: { layout: 'slim' } },
+    { id: 'spotify-feestje', sectionId: 'living', kind: 'button', entityId: 'media_player.jbl_bar_3', title: 'Feestje', icon: 'mdi:party-popper', position: 80, options: { service: 'playMedia', serviceData: { media_content_id: 'spotify://playlist/7nmueJ837vq0jL4ZtAnkCM', media_content_type: 'playlist' }, layoutType: 'slim' } },
     { id: 'bedroom-light', sectionId: 'upstairs', kind: 'button', entityId: 'light.slaapkamer_2', title: 'Slaapkamer', icon: 'mdi:bed-king-outline', position: 10, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'office-light', sectionId: 'upstairs', kind: 'button', entityId: 'light.kantoor', title: 'Kantoor', icon: 'mdi:desk', position: 20, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'attic-left', sectionId: 'upstairs', kind: 'button', entityId: 'light.zolder_verlichting_links', title: 'Zolder links', position: 30, options: { service: 'toggle', layoutType: 'slim' } },
