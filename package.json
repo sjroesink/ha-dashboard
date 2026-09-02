@@ -7,11 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "node --test test/*.test.ts",
+    "start": "node server/index.ts",
+    "config": "node server/cli.ts",
     "preview": "vite preview",
     "prettier": "prettier --write .",
-    "sync": "npx tsx scripts/sync-types.ts",
-    "prebuild": "npm run prettier",
-    "deploy": "npx tsx scripts/deploy.ts"
+    "sync": "npx tsx scripts/sync-types.ts"
   },
   "dependencies": {
     "react": "^19.2.0",

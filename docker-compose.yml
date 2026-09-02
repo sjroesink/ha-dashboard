@@ -1,0 +1,19 @@
+name: ha-dashboard
+
+services:
+  dashboard:
+    build: .
+    image: ha-dashboard:latest
+    container_name: ha-dashboard
+    restart: unless-stopped
+    user: "99:100"
+    ports:
+      - "10.0.0.170:3113:3000"
+    environment:
+      TZ: Europe/Amsterdam
+      DASHBOARD_DB: /app/data/dashboard.sqlite
+      DASHBOARD_DIST: /app/dist
+    volumes:
+      - /mnt/user/appdata/ha-dashboard/data:/app/data
+    security_opt:
+      - no-new-privileges:true
