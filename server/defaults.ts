@@ -9,16 +9,12 @@ export const defaultDashboard: DashboardSeed = {
     defaultDarkMode: true,
   },
   sections: [
-    { id: 'overview', title: 'Nu thuis', description: 'De belangrijkste standen in één oogopslag.', icon: 'mdi:home', position: 10 },
     { id: 'living', title: 'Woonkamer', description: 'Licht, temperatuur en entertainment.', icon: 'mdi:sofa', position: 20 },
     { id: 'upstairs', title: 'Boven', description: 'Slaapkamer, kantoor en zolder.', icon: 'mdi:stairs-up', position: 30 },
     { id: 'outside', title: 'Buiten', description: 'Veranda en buitentemperatuur.', icon: 'mdi:tree-outline', position: 40 },
     { id: 'system', title: 'Huisstatus', description: 'Back-up, netwerk en batterijstatus.', icon: 'mdi:shield-check-outline', position: 50 },
   ],
   cards: [
-    { id: 'weather', sectionId: 'overview', kind: 'weather', entityId: 'weather.forecast_thuis', title: 'Weer thuis', position: 10 },
-    { id: 'living-temperature', sectionId: 'overview', kind: 'sensor', entityId: 'sensor.woonkamer_temperatuur', title: 'Woonkamer', position: 20 },
-    { id: 'outside-temperature', sectionId: 'overview', kind: 'sensor', entityId: 'sensor.sander_en_ebru_woning_buitentemperatuur', title: 'Buiten', position: 30 },
     { id: 'living-light', sectionId: 'living', kind: 'button', entityId: 'light.woonkamer', title: 'Woonkamer', icon: 'mdi:floor-lamp', position: 10, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'dining-light', sectionId: 'living', kind: 'button', entityId: 'light.eettafel', title: 'Eettafel', icon: 'mdi:ceiling-light', position: 20, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'hall-light', sectionId: 'living', kind: 'button', entityId: 'light.hal', title: 'Hal', icon: 'mdi:wall-sconce-flat', position: 30, options: { service: 'toggle', layoutType: 'slim' } },
