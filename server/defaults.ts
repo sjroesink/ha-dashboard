@@ -12,7 +12,6 @@ export const defaultDashboard: DashboardSeed = {
     { id: 'living', title: 'Woonkamer', description: 'Licht, temperatuur en entertainment.', icon: 'mdi:sofa', position: 20 },
     { id: 'upstairs', title: 'Boven', description: 'Slaapkamer, kantoor en zolder.', icon: 'mdi:stairs-up', position: 30 },
     { id: 'outside', title: 'Buiten', description: 'Veranda en buitentemperatuur.', icon: 'mdi:tree-outline', position: 40 },
-    { id: 'system', title: 'Huisstatus', description: 'Back-up, netwerk en batterijstatus.', icon: 'mdi:shield-check-outline', position: 50 },
   ],
   cards: [
     { id: 'living-light', sectionId: 'living', kind: 'button', entityId: 'light.woonkamer', title: 'Woonkamer', icon: 'mdi:floor-lamp', position: 10, options: { service: 'toggle', layoutType: 'slim' } },
@@ -31,8 +30,5 @@ export const defaultDashboard: DashboardSeed = {
     { id: 'veranda-light', sectionId: 'outside', kind: 'button', entityId: 'light.veranda_2', title: 'Veranda', icon: 'mdi:string-lights', position: 10, options: { service: 'toggle', layoutType: 'slim' } },
     { id: 'veranda-temperature', sectionId: 'outside', kind: 'sensor', entityId: 'sensor.veranda_sensor_temperatuur', title: 'Temperatuur', position: 20 },
     { id: 'veranda-motion', sectionId: 'outside', kind: 'button', entityId: 'binary_sensor.veranda_beweging', title: 'Beweging', position: 30, options: { layoutType: 'slim' } },
-    { id: 'backup-status', sectionId: 'system', kind: 'button', entityId: 'sensor.backup_backup_manager_state', title: 'Back-up', icon: 'mdi:backup-restore', position: 10, options: { layoutType: 'slim' } },
-    { id: 'zigbee-status', sectionId: 'system', kind: 'button', entityId: 'binary_sensor.zigbee2mqtt_bridge_connection_state', title: 'Zigbee', icon: 'mdi:zigbee', position: 20, options: { layoutType: 'slim' } },
-    { id: 'phone-battery', sectionId: 'system', kind: 'sensor', entityId: 'sensor.pixel_9_pro_battery_level', title: 'Telefoon', position: 30 },
   ],
 };
